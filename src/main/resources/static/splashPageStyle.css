@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: block;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: inline;
+    padding: 10px;
+    font-size: 18px;
+}
+li a {
+    text-decoration: none;
+}
+
+li a:hover {
+     background-color: yellow;
+     padding: 5px;
+
+}
+
+#title {
+    text-align: center;
+}
+
+body{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1{
+  color: blue;
+}
