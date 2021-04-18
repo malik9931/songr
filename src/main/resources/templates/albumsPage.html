@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="albumsPageStyle.css">
+
+</head>
+<body>
+
+<header>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/albums">Albums</a>
+        </li>
+    </ul>
+</header>
+
+<h1>Welcome to the Albums Page!</h1>
+<h3>These are our Albums:</h3>
+
+<div class="container">
+    <div class="smallContainer" th:each="album : ${albums}">
+        <img th:src= "${album.imageUrl}" alt="Album Image" width="400"
+        height="400">
+        <h5>Album Title: <span th:text=${album.title}></span> </h5>
+        <p>Album artist: <span th:text=${album.artist}></span></p>
+        <p>Album Song Count <span th:text=${album.songCount}></span></p>
+        <p>Album Length <span th:text=${album.length}></span></p>
+        <br>
+
+    <!--    th:src="@{/images/valayev.jpg}"-->
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
