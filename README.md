@@ -54,3 +54,5 @@ By using this app, U can doing:
 
 ### Running
 You can run the app from the class: [SongrApplication.java](src/main/java/com/example/songr/SongrApplication.java) main method, then open the browser and type `http://localhost:8080/`
+
+Or you can visit the deploying one on [herokuapp](https://songr-app.herokuapp.com/)
