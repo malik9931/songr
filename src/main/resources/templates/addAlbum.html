@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="addAlbumStyle.css">
+
+</head>
+<body>
+<div class="topnav">
+
+            <a class="active" href="/">Home</a>
+
+            <a href="/albums">Albums</a>
+
+            <a href="/addAlbum">Add Album</a>
+
+</div>
+<div class="main-block">
+    <div class="left-part">
+<!--        <i class="fas fa-envelope"></i>-->
+<!--        <i class="fas fa-at"></i>-->
+<!--        <i class="fas fa-mail-bulk"></i>-->
+        <img class="fas" src="https://lh3.googleusercontent.com/proxy/sttc6WChIOS-4DqTFebZ3WAbkt5_pXD79NJYxTFjPqWypBfR2vzamqdhmsburmzCprWunQfS-OflQ834EpYOARV8hyhgi6DhkztPDNKOr3Gcbp8sKy0LbozuxlaZOsCi4bh8p9_2gzqK_yOa" alt="music" >
+    </div>
+<form action="/albums" method="post">
+<h1>Add a new album</h1>
+    <input type="text" name="title" placeholder="Title" />
+
+    <input type="text" name="artist" placeholder="Artist Name" />
+
+
+    <input type="number" name="songCount" placeholder="Song Count"/>
+
+    <input type="number" name="length" placeholder="Album Length (seconds)" />
+
+    <input type="text" name="imageUrl"  placeholder="The link of album’s art"/>
+
+    <input id="button" type="submit" value="Add Album">
+
+</form>
+</div>
+
+
+</body>
+</html>
