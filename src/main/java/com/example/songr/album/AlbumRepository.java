@@ -1,8 +1,6 @@
-package com.example.songr;
+package com.example.songr.album;
 
 import org.springframework.data.repository.CrudRepository;
-
-import javax.persistence.criteria.CriteriaBuilder;
 
 public interface AlbumRepository extends CrudRepository<AlbumModel, Integer> {
 }

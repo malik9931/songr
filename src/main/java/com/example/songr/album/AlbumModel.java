@@ -1,11 +1,12 @@
-package com.example.songr;
+package com.example.songr.album;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.example.songr.song.SongModel;
+
+import javax.persistence.*;
 import javax.annotation.Generated;
+import java.util.List;
+
 @Entity
 public class AlbumModel {
     @Id
@@ -16,6 +17,10 @@ public class AlbumModel {
     private int songCount;
     private int length;
     private String imageUrl;
+
+    // Select * from student where major_id = id
+    @OneToMany(mappedBy = "albumModel", cascade = CascadeType.ALL)
+    private List<SongModel> songModels;
 
     public AlbumModel(){
 
@@ -28,8 +33,8 @@ public class AlbumModel {
         this.length = length;
         this.imageUrl = imageUrl;
     }
-    // -----------------------Getter and Setter-----------------------
 
+    // -----------------------Getter and Setter-----------------------
 
     public Integer getId() {
         return id;
@@ -73,5 +78,9 @@ public class AlbumModel {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public List<SongModel> getSongModels() {
+        return songModels;
     }
 }

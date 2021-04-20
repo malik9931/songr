@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="albumsPageStyle.css">
+
+</head>
+<body>
+
+<div class="topnav">
+
+    <a class="active" href="/">Home</a>
+
+    <a href="/albums">Albums</a>
+
+    <a href="/addAlbum">Add Album</a>
+
+</div>
+
+<h1>Welcome to the Single Albums Page!</h1>
+<h3>These are our Albums:</h3>
+
+<div class="allCardsContainer">
+    <div class="singleCardContainer">
+        <img th:src= "${album.imageUrl}" alt="Album Image" style="width:100%">
+        <div class="smallContainer" >
+            <h5>Album Title: <span th:text=${album.title}></span> </h5>
+            <p>Album artist: <span th:text=${album.artist}></span></p>
+            <p>Album Song Count <span th:text=${album.songCount}></span></p>
+            <p>Album Length <span th:text=${album.length}></span></p>
+            <br>
+            <!--    th:src="@{/images/valayev.jpg}"-->
+            <a href="/addSong">U can add a songs for this album</a>
+        </div>
+    </div>
+<!--    <div class="singleCardContainer">-->
+<!--    <form action="/songs" method="post">-->
+<!--        <h1>Add a new album</h1>-->
+<!--        <input type="text" name="title" placeholder="Title" />-->
+
+<!--        <input type="text" name="artist" placeholder="Artist Name" />-->
+
+
+<!--        <input type="number" name="songCount" placeholder="Song Count"/>-->
+
+<!--        <input type="number" name="length" placeholder="Album Length (seconds)" />-->
+
+<!--        <input type="text" name="imageUrl"  placeholder="The link of album’s art"/>-->
+
+<!--        <input id="button" type="submit" value="Add Album">-->
+
+<!--    </form>-->
+<!--    </div>-->
+</div>
+
+
+
+</body>
+</html>

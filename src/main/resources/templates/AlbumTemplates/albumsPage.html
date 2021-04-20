@@ -19,6 +19,8 @@
 
     <a href="/addAlbum">Add Album</a>
 
+    <a href="/songs">Songs</a>
+
 </div>
 
 <h1>Welcome to the Albums Page!</h1>
@@ -32,7 +34,8 @@
         <p>Album artist: <span th:text=${album.artist}></span></p>
         <p>Album Song Count <span th:text=${album.songCount}></span></p>
         <p>Album Length <span th:text=${album.length}></span></p>
-        <br>
+        <a th:href="@{|/albums/${album.id}|}">Show Details</a>
+
 
     <!--    th:src="@{/images/valayev.jpg}"-->
 
