@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Songs Page</title>
+    <link rel="stylesheet" href="albumsPageStyle.css">
+
+</head>
+<body>
+
+<div class="topnav">
+
+    <a class="active" href="/">Home</a>
+
+    <a href="/albums">Albums</a>
+
+    <a href="/addAlbum">Add Album</a>
+
+    <a href="/songs">Songs</a>
+
+
+</div>
+
+<h1>Welcome to the Songs Page!</h1>
+<h3>These are the Songs of this Album:</h3>
+
+<div class="allCardsContainer">
+    <div class="singleCardContainer" th:each="song : ${songs}">
+<!--        <img th:src= "${song.album.imageUrl}" alt="Album Image" style="width:100%">-->
+        <div class="smallContainer" >
+            <h5>Song Title: <span th:text=${song.title}></span> </h5>
+            <p>Song length: <span th:text=${song.length}></span></p>
+            <p>Song Track Number <span th:text=${song.trackNumber}></span></p>
+            <br>
+
+            <!--    th:src="@{/images/valayev.jpg}"-->
+
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
